@@ -14,21 +14,26 @@ class Home extends Component {
   getItem(item) {
     if (item.author=="bot") {
       return (
-        <div>
+        <div style={{backgroundColor: "#EEE"}}>
 
-          <img src="http://www.gravatar.com/avatar/6d7b273512b621013346a866d80ffd30?s=20" />
-          <br/>
+          <img src="http://www.gravatar.com/avatar/6d7b273512b621013346a866d80ffd30?s=30" /> {  }
           <span style={{fontStyle:"italic"}}>
             {item.item}
           </span>
+          <br/>
+          <div><br/></div>
         </div>
       )
     } else {
       return (
         <div>
-          <strong>{item.author}</strong>
-          <br/>
+          <div><br/></div>
+          <strong>{item.author}</strong>: {    }
           {item.item}
+          <br/>
+          <div>
+            <br/>
+          </div>
         </div>
       )
     }
@@ -46,7 +51,6 @@ class Home extends Component {
         <div className="wrap">
           <div className="row">
             <div className="col-md-12">
-              <h1>Hello, </h1>
               <br/>
 
               {
